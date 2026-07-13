@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta Information-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Registration System using HTML CSS & Javascript">
+    <meta name="keywords" content="Student Registration,HTML,CSS,Javascript">
+    <meta name="author" content="Nandhini">
+    <!-------Title of the Page-->
+    <title>Student Registration System</title>
+    <!--------External CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!----------Header-->
+    <header>
+        <h1>Student Registration System</h1>
+        <p> Register student details,edit records,delete records and manage data easily.</p>
+    </header>
+
+    <!------------Main -->
+    <main>
+        <!--Registration Form-->
+        <section class="form-section">
+            <h2>Student Registration Form</h2>
+            <form id="studentForm" autocomplete="off">
+                <!-----Student Name-->
+                <div class="group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Enter Your Name" required>
+
+                </div>
+                <!---------Student ID-->
+                <div class="group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" placeholder="Enter Student ID" required>
+                </div>
+                <!-----Email-->
+                <div class="group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" placeholder="Enter Email Address" required>
+                </div>
+                <!-----Contact----->
+                <div class="group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" placeholder="Enter Contact Number" required>
+                </div>
+                <!------Button-->
+                <div class="button-group">
+                    <button type="submit" id="submitButton">Register Student</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+        <!---------------Student Records--->
+        <section class="table-section">
+            <h2> Registered Students</h2>
+            <!------------Scrollable -->
+            <div class="table-container" id="tableContainer">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Email ID</th>
+                            <th>Contact Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentList">
+                        <!----------Javascript will insert record here-->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p> &copy; 2026 Student Registration System .HTML,CSS,JavaScript</p>
+    </footer>
+
+    <!---External JavaScript--->
+    <script src="script.js"></script>
+</body>
+
+</html>
