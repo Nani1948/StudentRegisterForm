@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*     Body        */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fc;
+    color: #333;
+}
+
+/*    Header */
+header {
+    background: #0077cc;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* main*/
+main {
+    width: 90%;
+    margin: 30px auto;
+    max-width: 1100px;
+}
+
+/* Section */
+.form-section h2,
+.table-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077cc
+}
+
+.form-section,
+.table-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Form */
+
+#studentForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.group {
+    flex-direction: column;
+    display: flex;
+}
+
+.group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.group input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+    transition: 0.3s ease;
+
+}
+
+.group input:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+}
+
+/* Buttons*/
+.button-group {
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    grid-column: 1/-1;
+
+}
+
+.button-group button {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    padding: 12px 25px;
+
+}
+
+#submitButton {
+    background-color: #28a745;
+}
+
+#submitButton:hover {
+    background-color: #218838;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+
+/*Table*/
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+.table-container {
+    max-height: 350px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+thead {
+    background-color: #1976d2;
+    color: white;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 12px;
+
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+/*Actions*/
+.edit-btn {
+    background-color: #ff9800;
+    margin-right: 8px;
+}
+
+.delete-btn {
+    background-color: #e53935;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.edit-btn:hover {
+    background-color: #f57c00;
+}
+
+.delete-btn:hover {
+    background-color: #c62828;
+}
+
+/*footer*/
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/*Mobile*/
+@media (max-width:640px) {
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+}
+
+/*Tablet*/
+@media(min-width:641px) and (max-width:1024px) {
+    #studentForm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop*/
+@media (min-width:1025px) {
+    #studentForm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
