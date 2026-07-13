@@ -80,9 +80,13 @@ if (!namePattern.test(name)) {
         editIndex = -1;
         submitButton.textContent = "Register Student";
     }
+    //save data
+    
 
     saveStudents();
+    //Refresh Table
     displayStudents();
+    //clear form
     studentForm.reset();
 });
 
@@ -135,6 +139,7 @@ function deleteStudent(index) {
 
         submitButton.textContent = "Register Student";
     }
+}
     // Edit Student
     function editStudent(index) {
 
@@ -166,5 +171,4 @@ function toggleScrollbar() {
         tableContainer.style.overflowY = "hidden";
     }
 
-}
 }
